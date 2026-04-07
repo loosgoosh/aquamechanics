@@ -297,7 +297,7 @@
       const email = document.getElementById("f-email").value;
       const msg = document.getElementById("f-msg").value;
       if (!name || !email) return;
-      await fetch("https://formspree.io/f/xgoplldq", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name, company, email, message: msg }) });
+      await fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ access_key: "a0b7ca7c-4d01-4c2a-ace0-cb274ad07f3e", name, company, email, message: msg }) });
       document.getElementById("form-container").style.display = "none";
       document.getElementById("form-success").style.display = "block";
     }
